@@ -1,0 +1,195 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.content{
+    width: 1228px;
+    margin: 0 auto;
+}
+canvas{
+    opacity: 0.5;
+    z-index: -2;
+    position: fixed;
+}
+body{
+    background: #060e1b;
+    overflow: hidden;
+}
+/*head*/
+#header{
+    height: 260px;
+}
+#header .nav-header{
+    height: 40px;
+    background-color: #333;
+}
+#header .content{
+    width: 1228px;
+    height: 40px;
+    margin: 0 auto;
+}
+#header .nav-header .list-side-nav {
+    width: 700px;
+    height: 40px;
+    /*background-color: #ccc;*/
+    transform: translate(-10px); /*ul标签向左移动10像素*/
+}
+#header .nav-header .list-side-nav li{
+    position: relative;
+    /*display: inline-block;*/
+    float: left;
+    font-size: 12px;
+    line-height: 40px;
+    padding: 0 6px;
+    color: #b0b0b0;
+    cursor: pointer;
+}
+#header .nav-header .list-side-nav li:hover{
+    color: #fff;
+}
+#header .nav-header .list-side-nav li+li:after{ /*li+li:after表示li的后一个元素加伪元素*/
+    content: "";
+    position: absolute;
+    left: 0;
+    top:15px;
+    width: 1px;
+    height: 12px;
+    background-color: #fff;
+}
+#header .nav-header .app-qr-code .more{
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 125px;
+    box-sizing: border-box;
+    height: 150px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 4px #000;
+
+}
+#header .nav-header .app-qr-code:hover .more{
+    display: block;
+}
+#header .nav-header .app-qr-code .more img{
+    width: 86px;
+    height: 86px;
+    display: block;
+}
+#header .nav-header .app-qr-code .more span{
+    display: block;
+    font-size: 14px;
+    padding: 5px 0;
+    color: #000;
+}
+#header .nav-header .app-qr-code .more:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:-10px;
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    border-color: transparent transparent #fff transparent;
+    border-style: solid;
+}
+#header .nav-header .list-login-info{
+    width: 300px;
+    height: 40px;
+    /*background-color: #ccc;*/
+}
+#header .nav-header .list-login-info li{
+    float: right;
+    font-size: 12px;
+    line-height: 40px;
+    padding: 0 10px;
+    color: #b0b0b0;
+    cursor: pointer;
+}
+#header .nav-header .list-login-info  li:hover{
+    color: #fff;
+}
+#header .nav-header .list-login-info .shopping-cart{
+    position: relative;
+    width: 120px;
+    background-color: #424242;
+    font-size: 14px;
+    height: 40px;
+    box-sizing: border-box;
+}
+#header  .list-login-info .shopping-cart .more{
+    position: absolute;
+    right: 0;
+    top:40px;
+    box-shadow: 0 0 5px #000;
+    width: 320px;
+    height: 0;
+    transition: .3s;
+    overflow: hidden;
+    background-color: #ff6700;
+}
+#header  .list-login-info .shopping-cart .more .info{
+    line-height: 100px;
+    text-align: center;
+    color: #000;
+    overflow: hidden;
+}
+#header  .list-login-info .shopping-cart:hover .more {
+    height: 100px;
+}
+#header  .list-login-info .shopping-cart li:hover{
+    color: #ff6700;
+    /*background-color: #ccc;*/
+}
+#header .main-header{
+    height: 100px;
+    /*background-color:red;*/
+}
+#header .main-header .logo-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 234px;
+    height: 100px;
+}
+#header .main-header .logo-area li{
+    width: 55px;
+    height: 55px;
+    /*box-shadow: 0 0 5px #000 inset;*/
+}
+#header .main-header .logo-area .title{
+    /*background-color: #ff6700;*/
+    font-size: 0;
+    overflow: hidden;
+}
+#header .main-header .logo-area .title a:before{
+}
+
+#header .main-header .logo-area .title a:before{
+    background: url("../images/mi-home.png") no-repeat 50% 50%;
+}
+
+/*head end*/
+/*transform*/
+
+#transform{
+    height: 120px;
+    /*background-color: #fff;*/
+}
+#transform .topbar-banner-Wrapper{
+    height: 120px;
+    width: 100%;
+    background-image: url("../images/1.jpg");
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: auto 120px;
+    text-indent: -9999px;
+}
+/*transform end*/
