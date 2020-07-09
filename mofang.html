@@ -1,0 +1,430 @@
+<!doctype html> <!-- 声明身份 文档类型 -->
+<html>
+	<head><!--包含数据信息-->
+		<meta charset="utf-8"><!--信息标签 声明字符编码集 utf-8万国码-->
+		<meta name="Author" content="银时老师">
+		<meta name="keywords" content="电商,前端">
+		<meta name="Description" content="网站的描述,广告位">
+		<title>银时老师</title>
+		<style>
+			p,h1,h2,h3,h4,h5,h6,ul,li,body{
+				margin: 0;
+				font-size: 16px;
+				line-height: normal;
+			}
+			input{
+				padding: 0;
+				outline: none;/* border:*/
+			}
+			
+			ul,ol{
+				padding: 0;
+				list-style-type: none;
+			}
+			a{
+				color: #000;
+				text-decoration: none;
+			}
+			.clearfix:after{
+				display: block;
+				content: ".";
+				height: 0;
+				font-size: 0;
+				clear: both;
+				overflow: hidden;
+			}
+			.mofang{
+				margin: 300px auto;
+				width: 100px;
+				height: 100px;
+				transform-style: preserve-3d;
+				animation: roll 4s linear infinite;
+			}
+
+			@keyframes roll{
+				from{
+					transform: rotateX(0) rotateY(0);
+				}
+				to{
+					transform: rotateX(360deg) rotateY(-360deg);
+				}
+			}
+			.mofang .box:nth-child(1){
+				transform: translateX(-100px) translateY(-100px) translateZ(100px);
+			}
+			.mofang .box:nth-child(2){
+				transform: translateX(-100px) translateY(-100px) translateZ(0px);
+			}
+			.mofang .box:nth-child(3){
+				transform: translateX(-100px) translateY(-100px) translateZ(-100px);
+			}
+			
+			.mofang .box:nth-child(4){
+				transform: translateX(-100px) translateY(0px) translateZ(100px);
+			}
+			.mofang .box:nth-child(5){
+				transform: translateX(-100px) translateY(0px) translateZ(0px);
+			}
+			.mofang .box:nth-child(6){
+				transform: translateX(-100px) translateY(0px) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(7){
+				transform: translateX(-100px) translateY(100px) translateZ(100px);
+			}
+			.mofang .box:nth-child(8){
+				transform: translateX(-100px) translateY(100px) translateZ(0px);
+			}
+			.mofang .box:nth-child(9){
+				transform: translateX(-100px) translateY(100px) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(10){
+				transform: translateX(0) translateY(100px) translateZ(100px);
+			}
+			.mofang .box:nth-child(11){
+				transform: translateX(0) translateY(100px) translateZ(0px);
+			}
+			.mofang .box:nth-child(12){
+				transform: translateX(0) translateY(100px) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(13){
+				transform: translateX(100px) translateY(100px) translateZ(100px);
+			}
+			.mofang .box:nth-child(14){
+				transform: translateX(100px) translateY(100px) translateZ(0px);
+			}
+			.mofang .box:nth-child(15){
+				transform: translateX(100px) translateY(100px) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(16){
+				transform: translateX(100px) translateY(0) translateZ(100px);
+			}
+			.mofang .box:nth-child(17){
+				transform: translateX(100px) translateY(0) translateZ(0px);
+			}
+			.mofang .box:nth-child(18){
+				transform: translateX(100px) translateY(0) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(19){
+				transform: translateX(100px) translateY(-100px) translateZ(100px);
+			}
+			.mofang .box:nth-child(20){
+				transform: translateX(100px) translateY(-100px) translateZ(0px);
+			}
+			.mofang .box:nth-child(21){
+				transform: translateX(100px) translateY(-100px) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(22){
+				transform: translateX(0) translateY(-100px) translateZ(100px);
+			}
+			.mofang .box:nth-child(23){
+				transform: translateX(0) translateY(-100px) translateZ(0px);
+			}
+			.mofang .box:nth-child(24){
+				transform: translateX(0) translateY(-100px) translateZ(-100px);
+			}
+
+			.mofang .box:nth-child(25){
+				transform: translateX(0) translateY(0) translateZ(100px);
+			}
+			.mofang .box:nth-child(26){
+				transform: translateX(0) translateY(0) translateZ(0px);
+			}
+			.mofang .box:nth-child(27){
+				transform: translateX(0) translateY(0) translateZ(-100px);
+			}
+
+			.box{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				transform-style: preserve-3d;
+				/* transform: rotateX(30deg) rotateY(30deg); */
+			}
+			.box.red .mian{
+				background-color: red;			
+			}
+			.box.blue .mian{
+				background-color: blue;			
+			}
+			.box.green .mian{
+				background-color: green;			
+			}
+			.box.black .mian{
+				background-color: black;			
+			}
+			.box .mian{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				border: 1px black solid;
+				perspective: 1000px;
+			}
+			.box .mian:nth-child(1){
+				transform: rotateY(90deg) translateZ(-50px);
+			}
+			.box .mian:nth-child(2){
+				transform: rotateY(180deg) translateZ(-50px);
+			}
+			.box .mian:nth-child(3){
+				transform: rotateY(270deg) translateZ(-50px);
+			}
+			.box .mian:nth-child(4){
+				transform: rotateY(360deg) translateZ(-50px);
+			}
+			.box .mian:nth-child(5){
+				transform: rotateX(90deg) translateZ(-50px);
+			}
+			.box .mian:nth-child(6){
+				transform: rotateX(270deg) translateZ(-50px);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="mofang">
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box blue">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box green">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box black">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box blue">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			<div class="box green">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box black">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box green">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box blue">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box blue">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box black">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box green">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box blue">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+			
+			<div class="box red">
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+				<div class="mian"></div>
+			</div>
+
+		</div>
+
+		<!-- 存放一个小方块 -->
+	</body>
+</html>
